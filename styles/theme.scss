@@ -1,0 +1,180 @@
+@import "bootstrap";
+body {
+    font-family: Montserrat,sans-serif!important;
+    font-weight: 300;
+    color: #666;
+    height: 100%;
+}
+.sub-nav{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img_nav{
+    width: 190px;
+    img{
+        width: 100%;
+    }
+}
+.number_list {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.dtl-tl{
+    margin-bottom: 0;
+    font-size: 12px; 
+}
+.nav-pdf {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #191517d9;
+    z-index: 1040;
+    color: #fff;
+    padding: 10px 0;
+    span{
+        height: fit-content
+    }
+    .btn-firma {
+        min-width: 150px;
+        padding: 10px 20px;
+        background-color: #000080;
+        color: #fff!important;
+        border: none!important;
+        color: #ccc;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        @media (max-width: 768px) {
+            margin: 10px 0;
+        }
+    }
+    .options-pdf {
+        float: right;
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+            float: none;
+            justify-content: center;
+        }
+        .tls-item{
+            flex: 1;
+            max-width: 45px;
+            margin-right: 10px;
+            .btn_ico_pdf{
+                border: 2px solid #f6fbfb;
+                cursor: pointer;
+                color: #fff;
+                border-radius: 30px;
+                padding: 5px 0 0;
+                font-size: 16px;
+                text-align: center;
+                text-decoration: none;
+                font-weight: 400;
+                width: 40px;
+                height: 40px;
+                display: block;
+            }
+        }
+    }
+    .content-nav-pdf {
+        padding: 7px;
+        width: 98%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+}
+.cargador-screen {
+    z-index: 100000;
+    position: fixed;
+    background-color: rgba(25,21,23,.67);
+    width: 100%;
+    height: 100%!important;
+    display: block;
+    .cargador-screen-icon {
+        z-index: 100001;
+        display: block;
+        margin: auto;
+        width: 30%;
+        height: 100%;
+        background-image: url('/images/loader.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+.dash{
+    width: 100%;
+    height: 100%;
+    .desk-nav-bar{
+        width: 100%;
+        background: #f2f2f2;
+        height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+    .dh-content{
+        background: #f3f7fb;
+        position: fixed;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+        height: 100%;
+        @media (min-width: 1024px) {
+            flex: 8;
+            padding: 0 5px;
+            //background-color: #fff;
+        }
+        .box{
+            background: #fff;
+            padding: 70px 0 20px;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 5px;
+            margin: auto;
+            .box-pdf{
+                height: 2000px;
+                background-color: #000080;
+            }
+            .react-pdf__Document{
+                overflow-y: hidden;
+                overflow-x: hidden;
+                &.zoom{
+                    overflow-x: auto;
+                }
+            }
+            .react-pdf__Page{
+                &.zoom_1{
+                    width: 150% !important;
+                }
+                &.zoom_2{
+                    width: 200% !important;
+                }
+                &.zoom_3{
+                    width: 300% !important;
+                }
+                &.zoom_4{
+                    width: 350% !important;
+                }
+            }
+            .react-pdf__Page__canvas{
+                width: 100% !important;
+                height: 100% !important;
+                
+            }
+        }
+    }
+}
+
+
