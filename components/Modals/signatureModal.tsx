@@ -67,7 +67,7 @@ export default function SignatureModal({ token }: Props): ReactElement {
                         <h4 className="modal-title modal-aprobador-header text-center">Dibuja tu firma</h4>
                     </div>
                     <div className="modal-body modal-signature-body center-content">
-                        <p>Puedes repetir cuantas veces necesites la firma, necesitamos que sea clara, lo mas parecido a la firma de tu documento de identificacion</p>
+                        <p>Puedes repetir cuantas veces necesites la firma, necesitamos que sea clara, lo mas parecido a la firma de tu documento de identificación</p>
                         {   messages.show &&
                             <div className={`alert alert-${messages.type}`} role="alert">
                                 {messages.message}
@@ -89,12 +89,19 @@ export default function SignatureModal({ token }: Props): ReactElement {
                         </div> 
                     }
                     <div className="modal-footer center-content">
+                        <button
+                            onClick={sendSignatureAction}
+                            className="btn-firma btn-lg btn-firma-disable" type="button"> Enviar Firma <svg
+                            xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-telegram"
+                            width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none"
+                            strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"/>
+                        </svg></button>
                         <button 
                         onClick={cleanCanvasAction}
                         className="btn-limpiar btn-firma-disable" type="button"> Limpiar </button>
-                        <button
-                        onClick={sendSignatureAction} 
-                        className="btn-firma btn-firma-disable" type="button"> Firmar </button>
+
                     </div>
                 </div>
             </div>

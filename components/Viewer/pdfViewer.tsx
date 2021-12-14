@@ -44,10 +44,11 @@ export default function PdfViewer({ token }: Props): ReactElement {
             { caso.file.length > 0 ?
                 <>
                     <ul className="nav nav-tabs" id="myTab" role="tablist">
-                        {caso.file.map((file : any, index: any) =>{
+                        {caso.file.map((file : any, index: number) =>{
+                            console.log(index == 0);
                             return (
-                                <li className={`nav-item ${!index ? 'active': ''}`} role="presentation">
-                                    <a className={`nav-link ${!index ? 'active': ''}`} id={`tab-${index}`} data-toggle="tab"
+                                <li key={`tab-${index}`} className={`nav-item`} role="presentation">
+                                    <a className={`nav-link ${index == 0 ? 'active' : ''}`} id={`tab-${index}`} data-toggle="tab"
                                        href={`#tabref-${index}`} role="tab"
                                            aria-controls={`#tabref-${index}`} aria-selected="true">{file.name}</a>
                                 </li>

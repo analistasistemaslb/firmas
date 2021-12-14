@@ -10,7 +10,8 @@ export default function InputDigits({setDigits}: Props): ReactElement {
     return (
         <>
             <InputMask 
-            className="form-control"
+            className="form-control new-border-color"
+            alwaysShowMask={true}
             mask="9-9-9-9" value={value} onChange={(e) => {
                 setValue(e.target.value);
                 var arrayDigits = e.target.value.split('-');
